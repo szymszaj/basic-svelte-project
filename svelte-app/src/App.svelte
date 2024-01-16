@@ -1,30 +1,46 @@
 <script>
-	export let name;
+  let name = "";
+
+  function greet() {
+    alert(`Hello, ${name}!`);
+  }
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <h1>Prosta Aplikacja Powitalna</h1>
+  <label for="name">Wprowadź swoje imię:</label>
+  <input type="text" bind:value={name} id="name">
+
+  <button on:click={greet}>Powitaj</button>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  main {
+    text-align: center;
+    padding: 1em;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  h1 {
+    color: #007acc;
+    font-size: 2em;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  label {
+    display: block;
+    margin-top: 1em;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  button {
+    margin-top: 1em;
+    padding: 0.5em;
+    cursor: pointer;
+  }
 </style>
