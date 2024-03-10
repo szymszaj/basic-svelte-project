@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
   import { onMount } from 'svelte';
 
   let username = '';
@@ -93,7 +93,7 @@
       popupVisible = false;
     });
   });
-</script> -->
+</script>
   
 <style lang="css">
   @import './Register.css';
